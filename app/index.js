@@ -53,3 +53,63 @@ let { firstObj, secondObj } = destructuringObj;
 console.log("Destructuring objects: ", firstObj, secondObj);
 
 // ---------------------------------------
+
+// ARROW FUNCTIONS
+const blastoff = () => {
+  console.log("Arrow Function!");
+};
+
+blastoff();
+
+// ---------------------------------------
+
+// MAP FUNCTION
+let points = [10, 20, 30];
+points = points.map(item => item + 1);
+
+console.log("Map function: ", points);
+
+// ---------------------------------------
+
+// FILTER FUNCTION
+let scores = [90, 85, 67, 71, 70, 55];
+let passingArray = scores.filter(el => el >= 70);
+
+console.log(passingArray);
+
+// ---------------------------------------
+
+// IMPORTING/EXPORTING VALUES
+import { students, total } from "./students";
+console.log("Students: ", students);
+console.log("Total number of students: ", total);
+
+// ---------------------------------------
+
+// IMPORTING/EXPORTING FUNCTIONS
+import { add, multiply } from "./calculator";
+console.log("Add function: ", add(3, 5));
+console.log("Multiply function: ", multiply(3, 5));
+
+// IMPORTING DEFAULT MULTIPLY
+// import multiply from './calculator'
+
+// ---------------------------------------
+
+// ES6 CLASS
+import Entity from "./entity";
+
+class Hobbit extends Entity {
+  constructor(name, height) {
+    super(name, height);
+  }
+
+  greet() {
+    console.log(`Hello! I'm ${this.name} from the Shire!`);
+  }
+}
+
+let Frodo = new Hobbit("Frodo Baggins", 4.5);
+Frodo.greet();
+
+// ---------------------------------------
